@@ -126,5 +126,11 @@ schtasks /create /tn "TestUpdateTask"
 /sc onlogon /ru System /f
 ```
 
+**Schedule Task**
+![Attacker](https://github.com/wanghui070404/ELK_Suricata_Deployment/blob/main/src/ScheduledTask.png)
+
+**Windows Server Logs (winlogbeat)**
+![Attacker](https://github.com/wanghui070404/ELK_Suricata_Deployment/blob/main/src/WinLogs.png)
+
 
 
