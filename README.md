@@ -19,7 +19,8 @@ Lab environment for deploying Suricata as Network Intrusion Detection/Prevention
 
 ### 📖 Overview
 
-This project demonstrates a Security Operations Center (SOC) monitoring lab built using the Elastic Stack and Suricata. This project demonstrates a Security Operations Center (SOC) monitoring lab built using the Elastic Stack and Suricata. 
+This project demonstrates a Security Operations Center (SOC) monitoring lab built using the Elastic Stack and Suricata.
+
 The goal of this project is to demonstrate how a SOC analyst can:
 **Monitor system and network activities**
 **Detect suspicious behaviors**
@@ -50,7 +51,9 @@ The following architecture illustrates how logs flow from monitored systems to t
 
 ### 🔄 Log Pipeline
 Logs from all monitored systems are processed through the Elastic Stack.
+
 Pipeline workflow:
+```text
 Filebeat / Winlogbeat / Suricata
             │
             ▼
