@@ -11,8 +11,6 @@ Lab environment for deploying Suricata as Network Intrusion Detection/Prevention
 - [Log Pipeline](#log-pipeline)
 - [Attack Simulation](#attack-simulation)
 - [Kibana Dashboards](#kibana-dashboards)
-- [Lab Setup](#lab-setup)
-- [Skills Demonstrated](#skills-demonstrated)
 - [Future Improvements](#future-improvements)
 
 ---
@@ -67,4 +65,19 @@ Filebeat / Winlogbeat / Suricata
             ▼
           Kibana
      (Visualization & analysis)
+```
+
+### ⚔ Attack Simulation
+
+The lab includes multiple simulated attack scenarios.
+
+## Network Reconnaissance
+
+Network scanning using:
+```text
+nmap -sS -sV -O -T4 <target-ip>
+```
+
+
+
 
