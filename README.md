@@ -78,6 +78,8 @@ Network scanning using:
 nmap -sS -sV -O -T4 <target-ip>
 ```
 
+**Attack simulation**
+
 
 
 
