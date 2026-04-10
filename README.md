@@ -48,4 +48,20 @@ The following architecture illustrates how logs flow from monitored systems to t
 - **Ubuntu Server** (192.168.85.139) – Victim
 ![Attacker](https://github.com/wanghui070404/ELK_Suricata_Deployment/blob/main/src/Screenshot%202026-04-10%20150422.png)
 
+### 🔄 Log Pipeline
+Logs from all monitored systems are processed through the Elastic Stack.
+Pipeline workflow:
+Filebeat / Winlogbeat / Suricata
+            │
+            ▼
+         Logstash
+     (Log parsing & filtering)
+            │
+            ▼
+       Elasticsearch
+        (Data storage)
+            │
+            ▼
+          Kibana
+     (Visualization & analysis)
 
